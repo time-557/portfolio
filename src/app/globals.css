@@ -128,3 +128,23 @@
   font-family: 'Geist', 'Geist Fallback', sans-serif;
   font-weight: 600;
 }
+
+
+/* Hide scrollbar but still allow scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+@keyframes custom-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.1; } /* Change 0.3 to your desired min opacity */
+}
+
+.custom-pulse {
+  animation: custom-pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  /* 0.7s = speed, adjust as needed */
+}

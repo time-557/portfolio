@@ -60,7 +60,7 @@ export function AchievementsCarousel() {
   }, [isHovered]);
 
   return (
-    <section className="max-w-5xl mx-auto px-6 py-12">
+    <section id="achievements" className="max-w-5xl mx-auto px-6 py-12">
       <h2 className="text-5xl font-bold mb-8 text-center pb-8">Achievements</h2>
 
       <div

@@ -16,7 +16,7 @@ export default function Home() {
       {/* <FileEditorPage></FileEditorPage> */}
       <TopNavigation></TopNavigation>
       <Hero></Hero>
-      <InstrumentsServer />
+      {/* <InstrumentsServer /> */}
       <CertificationsSkills></CertificationsSkills>
       <EducationTimeline></EducationTimeline>
       <ProjectsSection></ProjectsSection>

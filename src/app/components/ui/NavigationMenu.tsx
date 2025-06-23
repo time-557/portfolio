@@ -43,38 +43,45 @@ export function ModeToggle() {
 }
 
 export function TopNavigation() {
+	// Smooth scroll handler
+	const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+		e.preventDefault();
+		const el = document.getElementById(id);
+		if (el) {
+			el.scrollIntoView({ behavior: "smooth" });
+		}
+	};
+
 	return (
 		<NavigationMenu viewport={false} className="pt-2 mx-auto max-w-7xl px-4">
 			<NavigationMenuList>
 				<NavigationMenuItem>
 					<NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-						<Link href="/" className="bg-transparent">Education</Link>
+						<a href="#education" className="bg-transparent" onClick={e => handleSmoothScroll(e, "education")}>Education</a>
 					</NavigationMenuLink>
 				</NavigationMenuItem>
 
 				<NavigationMenuItem>
 					<NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-						<Link href="/#certifications" className="bg-transparent">Certifications & Skills</Link>
+						<a href="#certifications" className="bg-transparent" onClick={e => handleSmoothScroll(e, "certifications")}>Certifications & Skills</a>
 					</NavigationMenuLink>
 				</NavigationMenuItem>
 
 				<NavigationMenuItem>
 					<NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-						<Link href="/#projects" className="bg-transparent">Projects</Link>
+						<a href="#projects" className="bg-transparent" onClick={e => handleSmoothScroll(e, "projects")}>Projects</a>
 					</NavigationMenuLink>
 				</NavigationMenuItem>
 
 				<NavigationMenuItem>
 					<NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-						<Link href="/#achievements" className="bg-transparent">Achievements</Link>
+						<a href="#achievements" className="bg-transparent" onClick={e => handleSmoothScroll(e, "achievements")}>Achievements</a>
 					</NavigationMenuLink>
 				</NavigationMenuItem>
 
 				<NavigationMenuItem>
 					<NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-						<Link href="/#contact" className="bg-transparent">
-							Contact
-						</Link>
+						<a href="#contact" className="bg-transparent" onClick={e => handleSmoothScroll(e, "contact")}>Contact</a>
 					</NavigationMenuLink>
 				</NavigationMenuItem>
 				<NavigationMenuItem>

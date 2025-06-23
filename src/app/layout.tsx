@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./utils/theme-provider";
 import { CursorLight } from "./utils/CursorLight";
+import BackToTopButton from "../components/ui/BackToTopButton";
 
 
 const geistSans = Geist({
@@ -36,6 +37,7 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem>
           {children}
+          <BackToTopButton />
         </ThemeProvider>
       </body>
     </html>
