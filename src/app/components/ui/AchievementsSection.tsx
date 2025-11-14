@@ -6,24 +6,16 @@ import { CheckCircle } from "lucide-react";
 
 const achievements = [
   {
-    title: "Winner - Local Hackathon 2024",
-    description: "Led a team to develop an AI-powered web app, winning 1st place out of 50+ teams.",
-  },
-  {
-    title: "Google HashCode Participant 2023",
+    title: "Google HashCode Participant 2022",
     description: "Collaborated in a team solving real-world algorithmic challenges.",
   },
   {
     title: "Open Source Contributor",
-    description: "Contributed features and bug fixes to popular open source projects on GitHub.",
+    description: "Hacktober 2021 and 2022: Contributed features and bug fixes to popular open source projects on GitHub.",
   },
   {
-    title: "Tech Speaker 2024",
-    description: "Presented a talk on scalable React apps at DevConf.",
-  },
-  {
-    title: "Certified Kubernetes Administrator",
-    description: "Successfully completed CKA certification.",
+    title: "Oracle Internal Hackathon 2025",
+    description: "Runner-up in Oracle's internal hackathon with an innovative cloud solution.",
   },
 ];
 

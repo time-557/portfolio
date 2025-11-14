@@ -1,26 +1,13 @@
 import type { NextConfig } from "next";
-const isProd = process.env.NODE_ENV === 'production';
+const repoName = "portfolio";
+const isGithubPages = process.env.GITHUB_PAGES === "true";
 const nextConfig: NextConfig = {
-  /* config options here */
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'Cross-Origin-Embedder-Policy',
-            value: 'require-corp',
-          },
-          {
-            key: 'Cross-Origin-Opener-Policy',
-            value: 'same-origin',
-          },
-        ],
-      },
-    ];
-  },
-  assetPrefix: isProd ? '/portfolio/' : '',
-  basePath: isProd ? '/portfolio' : '',
+  output: "export",
+  ...(isGithubPages && {
+    basePath: `/${repoName}`,
+    assetPrefix: `/${repoName}/`,
+  }),
+  assetPrefix: true ? 'https://time-557.github.io/portfolio/' : '',
 };
 
 export default nextConfig;

@@ -8,7 +8,7 @@ import { AchievementsCarousel } from "./components/ui/AchievementsSection";
 // import { InstrumentsServer } from "./components/server/InstrumentsServer";
 // import { FileEditorPage } from "./components/ui/WebcontainerTest";
 
-export const dynamic = "force-dynamic";
+// Removed for static export compatibility
 
 export default function Home() {
   return (
