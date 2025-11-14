@@ -2,9 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronDown } from "lucide-react";
 
-const roles = ["Developer", "Upcoming Business Analyst", "Tech Enthusiast"];
+const roles = ["Developer", "Data Analyst", "Data Engineer", "Tech Enthusiast"];
 
 export function Hero() {
 	const [displayedText, setDisplayedText] = useState("");

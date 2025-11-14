@@ -2,15 +2,21 @@
 import {
   SiJavascript,
   SiTypescript,
-  SiReact,
   SiNextdotjs,
   SiTailwindcss,
-  SiNodedotjs,
   SiPython,
   SiPostgresql,
   SiGoogleanalytics,
   SiAmazon,
+  SiSnowflake,
+  SiDocker,
+  SiOracle,
+  SiGnubash,
+  SiGit,
+  SiApacheairflow,
 } from "react-icons/si";
+
+import { DiJava } from "react-icons/di";
 
 type Project = {
     id: number;
@@ -39,10 +45,18 @@ type Education = {
     description?: string;
     url?: string;
 };
-
+let counter = 0;
 export const Projects: Project[] = [
     {
-        id: 1,
+      id: ++counter,
+      title: "db-delta",
+      url: "https://github.com/hussein-hub/db-delta",
+      description: "A 'Git diff for databases' built in Python to find schema, row, and statistical differences in terabyte-scale data. It's SQL-native, pushing computation directly to servers like Snowflake and Postgres by generating dialect-specific queries.",
+      tech_stack: [],
+      date: new Date("2025-11-01")
+    },
+    {
+        id: ++counter,
         title: "Void",
         url: "https://github.com/Winter-Soren/void",
         description: "A cloud native deployment platform to reduce deployment time on OCI, automating infrastructure provisioning via custom CLI.",
@@ -50,7 +64,7 @@ export const Projects: Project[] = [
         date: new Date("2025-04-01"),
     },
     {
-        id: 2,
+        id: ++counter,
         title: "Edumate",
         url: "https://github.com/hussein-hub/Edumate",
         description: "Edumate is a flexible education management system that simplifies admin and academic tasks, boosts efficiency, and enhances the digital experience for teachers and students.",
@@ -58,7 +72,7 @@ export const Projects: Project[] = [
         date: new Date("2023-05-01"),
     },
     {
-        id: 3,
+        id: ++counter,
         title: "Panacea",
         url: "https://github.com/Panacea-4-U/Modular-Panacea",
         description: "Built a web platform leveraging ML models (80% accuracy) to assess lung, kidney, and heart disease risks, with geolocation-based specialist search, enhancing early diagnosis and care access.",
@@ -66,7 +80,7 @@ export const Projects: Project[] = [
         date: new Date("2022-06-01"),
     },
     {
-        id: 4,
+        id: ++counter,
         title: "Portfolio Website",
         url: "https://github.com/time-557/portfolio",
         description: "A personal portfolio built with Next.js showcasing my projects and skills.",
@@ -74,7 +88,7 @@ export const Projects: Project[] = [
         date: new Date("2025-06-01"),
     },
     {
-        id: 5,
+        id: ++counter,
         title: "Smart Attendance System",
         url: "https://github.com/hussein-hub/Smart-Attendance-System",
         description: "A system for managing attendance using facial recognition.",
@@ -166,16 +180,23 @@ export const certifications: Certificate[] = [
 ];
 
 export const skillsWithProficiency = [
-  { skill: "JavaScript", level: 90, Icon: SiJavascript, learning: false },
-  { skill: "TypeScript", level: 85, Icon: SiTypescript, learning: false },
-  { skill: "React", level: 95, Icon: SiReact, learning: false },
-  { skill: "Next.js", level: 90, Icon: SiNextdotjs, learning: true },
-  { skill: "Tailwind CSS", level: 80, Icon: SiTailwindcss, learning: true },
-  { skill: "Node.js", level: 75, Icon: SiNodedotjs, learning: false },
-  { skill: "Python", level: 85, Icon: SiPython, learning: false },
-  { skill: "SQL", level: 80, Icon: SiPostgresql, learning: false },
-  { skill: "Data Analytics", level: 70, Icon: SiGoogleanalytics, learning: true },
-  { skill: "AWS", level: 65, Icon: SiAmazon, learning: false },
+  { skill: "JavaScript", level: 70, Icon: SiJavascript, learning: false },
+  { skill: "TypeScript", level: 75, Icon: SiTypescript, learning: false },
+  { skill: "Next.js", level: 60, Icon: SiNextdotjs, learning: true },
+  { skill: "Tailwind CSS", level: 60, Icon: SiTailwindcss, learning: true },
+  { skill: "Python", level: 90, Icon: SiPython, learning: false },
+  { skill: "SQL", level: 90, Icon: SiPostgresql, learning: false },
+  { skill: "Data Analytics", level: 80, Icon: SiGoogleanalytics, learning: true },
+  { skill: "AWS", level: 75, Icon: SiAmazon, learning: false },
+  // Added skills requested by user with matching icons where available
+  { skill: "Snowflake", level: 75, Icon: SiSnowflake, learning: false },
+  { skill: "Docker", level: 75, Icon: SiDocker, learning: false },
+  { skill: "Oracle", level: 90, Icon: SiOracle, learning: false },
+  { skill: "Java", level: 90, Icon: DiJava, learning: false },
+  { skill: "Git", level: 90, Icon: SiGit, learning: false },
+  { skill: "Bash", level: 70, Icon: SiGnubash, learning: false },
+  { skill: "Airflow", level: 80, Icon: SiApacheairflow, learning: false },
+  { skill: "PL/SQL", level: 90, Icon: SiOracle, learning: false },
 ];
 
 
@@ -184,7 +205,7 @@ export const education: Education [] = [
     title: "10th, Indian Certificate of Secondary Education (ICSE)",
     institution: "Christ Church School",
     country: "India",
-    duration: "2007 – 2017",
+    duration: "2007 - 2017",
     url: "https://christchurchschoolmumbai.org/",
     description: "Completed my secondary education with a focus on science and mathematics.",
   },
@@ -200,7 +221,7 @@ export const education: Education [] = [
     title: "Bachelor of Technology in Computer Science and Engineering",
     institution: "KJ Somaiya College of Engineering",
     country: "India",
-    duration: "2019 – 2023",
+    duration: "2019 - 2023",
     url: "https://kjsce.somaiya.edu/en",
     description: "Graduated with a B.Tech in Computer Science, focusing on software development, data structures, and algorithms.",
   },
@@ -208,7 +229,7 @@ export const education: Education [] = [
     title: "Masters in Business Analytics",
     institution: "University College Dublin",
     country: "Ireland",
-    duration: "Upcoming",
+    duration: "2025 - Current",
     url: "https://www.ucd.ie/"
   },
 ];

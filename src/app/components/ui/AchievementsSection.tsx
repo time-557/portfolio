@@ -36,17 +36,20 @@ export function AchievementsCarousel() {
     const container = scrollRef.current;
     if (!container) return;
 
-    let scrollWidth = container.scrollWidth / 2;
-    const speed = 0.5; // pixels per frame
+    const halfScroll = container.scrollWidth / 2;
+    const speed = 1; // pixels per frame (increased for visible motion)
 
     const step = () => {
       if (!container) return;
 
       if (!isHovered) {
-        if (container.scrollLeft >= scrollWidth) {
-          container.scrollLeft -= scrollWidth;
-        }
+        // Advance the scroll
         container.scrollLeft += speed;
+
+        // If we've scrolled past the first (original) block, wrap back
+        if (container.scrollLeft >= halfScroll) {
+          container.scrollLeft -= halfScroll;
+        }
       }
 
       animationRef.current = requestAnimationFrame(step);
@@ -65,7 +68,7 @@ export function AchievementsCarousel() {
 
       <div
         ref={scrollRef}
-        className="flex space-x-6 overflow-x-hidden scrollbar-hide relative"
+        className="flex space-x-6 overflow-x-auto scrollbar-hide relative"
         style={{
           scrollBehavior: "auto",
           maskImage:
