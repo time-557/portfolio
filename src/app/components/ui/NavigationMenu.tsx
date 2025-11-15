@@ -75,6 +75,12 @@ export function TopNavigation() {
 
 				<NavigationMenuItem>
 					<NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+						<a href="#publications" className="bg-transparent" onClick={e => handleSmoothScroll(e, "publications")}>Publications</a>
+					</NavigationMenuLink>
+				</NavigationMenuItem>
+
+				<NavigationMenuItem>
+					<NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
 						<a href="#achievements" className="bg-transparent" onClick={e => handleSmoothScroll(e, "achievements")}>Achievements</a>
 					</NavigationMenuLink>
 				</NavigationMenuItem>

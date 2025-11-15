@@ -45,6 +45,17 @@ type Education = {
     description?: string;
     url?: string;
 };
+
+type Publication = {
+    id: number;
+    title: string;
+    authors: string[];
+    publication: string;
+    date: Date;
+    description: string;
+    url?: string;
+    doi?: string;
+};
 let counter = 0;
 export const Projects: Project[] = [
     {
@@ -52,7 +63,7 @@ export const Projects: Project[] = [
       title: "db-delta",
       url: "https://github.com/hussein-hub/db-delta",
       description: "A 'Git diff for databases' built in Python to find schema, row, and statistical differences in terabyte-scale data. It's SQL-native, pushing computation directly to servers like Snowflake and Postgres by generating dialect-specific queries.",
-      tech_stack: [],
+      tech_stack: ["Python", "SQL", "Snowflake", "PostgreSQL", ""],
       date: new Date("2025-11-01")
     },
     {
@@ -101,25 +112,12 @@ export const Projects: Project[] = [
 export const certifications: Certificate[] = [
   {
     id: 1,
-    title: "IBM Relational Database Administrator",
-    issuer: "IBM",
-    year: "June 2025",
-    link: "https://coursera.org/verify/professional-cert/EJ6CJ0UFGI5D",
+    title: "AWS Certified Developer Associate (DVA-C02)",
+    issuer: "Amazon Web Services",
+    year: "In Progress",
     description:
-      "Covers core skills in relational database design, SQL, Python, ETL, and administration using real-world tools and hands-on labs.",
-    courses: [
-      "Introduction to Data Engineering",
-      "Introduction to Relational Databases (RDBMS)",
-      "Python for Data Science, AI & Development",
-      "Python Project for Data Engineering",
-      "Databases and SQL for Data Science with Python",
-      "Hands-on Introduction to Linux Commands and Shell Scripting",
-      "ETL and Data Pipelines with Shell, Airflow and Kafka",
-      "Data Warehouse Fundamentals",
-      "Relational Database Administration (DBA)",
-      "Relational Database Administration Capstone Project",
-      "Generative AI: Elevate your Data Engineering Career",
-    ],
+      "Currently preparing for certification. Focused on building and deploying cloud applications on AWS.",
+    courses: [],
   },
   {
     id: 2,
@@ -161,7 +159,7 @@ export const certifications: Certificate[] = [
   {
     id: 4,
     title: "Foundation of Data Science",
-    issuer: "Coursera (Taught by Google)",
+    issuer: "Google",
     year: "February 2025",
     link: "https://www.coursera.org/account/accomplishments/verify/HFCH760LP1QS",
     description:
@@ -170,33 +168,48 @@ export const certifications: Certificate[] = [
   },
   {
     id: 5,
-    title: "AWS Certified Developer Associate (DVA-C02)",
-    issuer: "Amazon Web Services",
-    year: "In Progress",
+    title: "IBM Relational Database Administrator",
+    issuer: "IBM",
+    year: "June 2025",
+    link: "https://coursera.org/verify/professional-cert/EJ6CJ0UFGI5D",
     description:
-      "Currently preparing for certification. Focused on building and deploying cloud applications on AWS.",
-    courses: [],
+      "Covers core skills in relational database design, SQL, Python, ETL, and administration using real-world tools and hands-on labs.",
+    courses: [
+      "Introduction to Data Engineering",
+      "Introduction to Relational Databases (RDBMS)",
+      "Python for Data Science, AI & Development",
+      "Python Project for Data Engineering",
+      "Databases and SQL for Data Science with Python",
+      "Hands-on Introduction to Linux Commands and Shell Scripting",
+      "ETL and Data Pipelines with Shell, Airflow and Kafka",
+      "Data Warehouse Fundamentals",
+      "Relational Database Administration (DBA)",
+      "Relational Database Administration Capstone Project",
+      "Generative AI: Elevate your Data Engineering Career",
+    ]
   },
 ];
 
 export const skillsWithProficiency = [
-  { skill: "JavaScript", level: 70, Icon: SiJavascript, learning: false },
-  { skill: "TypeScript", level: 75, Icon: SiTypescript, learning: false },
-  { skill: "Next.js", level: 60, Icon: SiNextdotjs, learning: true },
-  { skill: "Tailwind CSS", level: 60, Icon: SiTailwindcss, learning: true },
   { skill: "Python", level: 90, Icon: SiPython, learning: false },
+  { skill: "Java", level: 90, Icon: DiJava, learning: false },
   { skill: "SQL", level: 90, Icon: SiPostgresql, learning: false },
+  { skill: "Oracle", level: 90, Icon: SiOracle, learning: false },
+  { skill: "PL/SQL", level: 90, Icon: SiOracle, learning: false },
   { skill: "Data Analytics", level: 80, Icon: SiGoogleanalytics, learning: true },
+  { skill: "Busines Analytics", level: 80, Icon: SiGoogleanalytics, learning: true },
   { skill: "AWS", level: 75, Icon: SiAmazon, learning: false },
-  // Added skills requested by user with matching icons where available
   { skill: "Snowflake", level: 75, Icon: SiSnowflake, learning: false },
   { skill: "Docker", level: 75, Icon: SiDocker, learning: false },
-  { skill: "Oracle", level: 90, Icon: SiOracle, learning: false },
-  { skill: "Java", level: 90, Icon: DiJava, learning: false },
   { skill: "Git", level: 90, Icon: SiGit, learning: false },
   { skill: "Bash", level: 70, Icon: SiGnubash, learning: false },
   { skill: "Airflow", level: 80, Icon: SiApacheairflow, learning: false },
-  { skill: "PL/SQL", level: 90, Icon: SiOracle, learning: false },
+  { skill: "JavaScript", level: 60, Icon: SiJavascript, learning: false },
+  { skill: "TypeScript", level: 60, Icon: SiTypescript, learning: false },
+  { skill: "Next.js", level: 60, Icon: SiNextdotjs, learning: true },
+  { skill: "Tailwind CSS", level: 60, Icon: SiTailwindcss, learning: true },
+  { skill: "Business Optimisation", level: 70, Icon: SiTailwindcss, learning: true },
+  // Added skills requested by user with matching icons where available
 ];
 
 
@@ -231,5 +244,17 @@ export const education: Education [] = [
     country: "Ireland",
     duration: "2025 - Current",
     url: "https://www.ucd.ie/"
+  },
+];
+
+export const publications: Publication[] = [
+  {
+    id: 1,
+    title: "Comparative Analysis of Database Delta Detection Strategies for Large-Scale Data Warehouses",
+    authors: ["Hussein Khan", "Data Engineering Team"],
+    publication: "Data Engineering Journal",
+    date: new Date("2025-11-01"),
+    description: "Explores efficient methods for detecting schema and data differences in terabyte-scale databases, comparing SQL-native approaches with traditional delta detection methods.",
+    url: "https://github.com/hussein-hub/db-delta",
   },
 ];

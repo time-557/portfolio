@@ -7,6 +7,11 @@ import Link from "next/link";
 import { Projects } from "../../utils/data";
 import { CiCalendar } from "react-icons/ci";
 
+// Use a minimal, muted badge style for all tech labels to keep the UI calm.
+function techClasses(_tech: string) {
+  return "bg-muted/6 text-muted-foreground border-border";
+}
+
 
 export function ProjectsSection() {
 
@@ -15,9 +20,9 @@ export function ProjectsSection() {
       <h2 className="text-4xl sm:text-5xl font-bold text-center mb-20">Projects</h2>
 
       <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-        {Projects.map((project, index) => (
+        {Projects.map((project) => (
           <Card
-            key={index}
+            key={project.id}
             className="transition-transform transform hover:scale-105 hover:shadow-lg hover:border-primary hover:bg-muted/10"
           >
             <CardHeader className="flex flex-col items-start gap-2">
@@ -44,7 +49,7 @@ export function ProjectsSection() {
               <p className="text-sm text-muted-foreground">{project.description}</p>
               <div className="flex flex-wrap gap-2">
                 {project.tech_stack.map((tech, i) => (
-                  <Badge key={i} variant="outline" className="text-xs">
+                  <Badge key={i} variant="outline" className={`text-xs ${techClasses(tech)} px-2 py-0.5`}> 
                     {tech}
                   </Badge>
                 ))}

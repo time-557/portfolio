@@ -4,6 +4,7 @@ import { Hero } from "./components/ui/HeroSection";
 import { CertificationsSkills } from "./components/ui/CertificationsSkills";
 import {EducationTimeline} from "./components/ui/EducationTimeline";
 import { ProjectsSection } from "./components/ui/ProjectsSection";
+import { PublicationsSection } from "./components/ui/PublicationsSection";
 import { AchievementsCarousel } from "./components/ui/AchievementsSection";
 // import { InstrumentsServer } from "./components/server/InstrumentsServer";
 // import { FileEditorPage } from "./components/ui/WebcontainerTest";
@@ -20,6 +21,7 @@ export default function Home() {
       <CertificationsSkills></CertificationsSkills>
       <EducationTimeline></EducationTimeline>
       <ProjectsSection></ProjectsSection>
+      <PublicationsSection></PublicationsSection>
       <AchievementsCarousel></AchievementsCarousel>
     </div>
   );

@@ -42,7 +42,7 @@ export function Hero() {
 
 
 			<h1 className="text-5xl font-extrabold leading-tight max-w-4xl mb-6">
-				Hi, I’m <span className="text-primary"> Motiwala</span> — a{" "}
+				Hi, I’m <span className="text-primary">Hussein Motiwala</span> — a{" "}
 				<span className="text-primary dark:text-secondary">{displayedText}&nbsp;</span>
 				<span className="border-r-2 border-secondary animate-pulse inline-block" />
 			</h1>
