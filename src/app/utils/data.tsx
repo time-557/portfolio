@@ -203,7 +203,8 @@ export const certifications: Certificate[] = [
 export const skillsWithProficiency = [
   { skill: "Business Optimisation", level: 70, Icon: SiTailwindcss, learning: true },
   { skill: "Data Analytics", level: 80, Icon: SiGoogleanalytics, learning: true },
-  { skill: "Busines Analytics", level: 80, Icon: SiGoogleanalytics, learning: true },
+  { skill: "Business Analytics", level: 80, Icon: SiGoogleanalytics, learning: true },
+  { skill: "Spring Boot", level: 90, Icon: DiJava, learning: true },
   { skill: "Python", level: 90, Icon: SiPython, learning: false },
   { skill: "Java", level: 90, Icon: DiJava, learning: false },
   { skill: "SQL", level: 90, Icon: SiPostgresql, learning: false },
