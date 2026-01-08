@@ -150,14 +150,14 @@ export function CertificationsSkills() {
 										initial={{ opacity: 0, y: 20 }}
 										animate={{ opacity: 1, y: 0 }}
 										transition={{ duration: 0.5, delay: level / 200 }}
-										className="group flex flex-col justify-between p-5 min-h-[110px] border border-border rounded-md bg-background dark:bg-background-dark space-y-3 hover:shadow-lg hover:border-primary transition-transform duration-300 cursor-default hover:scale-105"
+										className="group flex flex-col justify-between p-5 min-h-[110px] border border-border rounded-md bg-background dark:bg-background-dark space-y-3 hover:shadow-lg hover:border-yellow-400 transition-transform duration-300 cursor-default hover:scale-105"
 									>
 										<div className="flex justify-between items-center w-full">
 											<div className="flex items-center space-x-3">
 												{Icon && (
-													<Icon className="w-8 h-8 filter transition duration-300 " />
+													<Icon className="w-8 h-8 filter transition duration-300 group-hover:text-yellow-400" />
 												)}
-												<span className="font-semibold text-foreground dark:text-foreground-dark">
+												<span className="font-semibold text-foreground dark:text-foreground-dark group-hover:text-yellow-400">
 													{skill}
 												</span>
 											</div>

@@ -86,11 +86,6 @@ export function TopNavigation() {
 				</NavigationMenuItem>
 
 				<NavigationMenuItem>
-					<NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-						<a href="#contact" className="bg-transparent" onClick={e => handleSmoothScroll(e, "contact")}>Contact</a>
-					</NavigationMenuLink>
-				</NavigationMenuItem>
-				<NavigationMenuItem>
 					<ModeToggle />
 				</NavigationMenuItem>
 			</NavigationMenuList>

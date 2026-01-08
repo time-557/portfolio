@@ -6,6 +6,7 @@ import {EducationTimeline} from "./components/ui/EducationTimeline";
 import { ProjectsSection } from "./components/ui/ProjectsSection";
 import { PublicationsSection } from "./components/ui/PublicationsSection";
 import { AchievementsCarousel } from "./components/ui/AchievementsSection";
+import Footer from "./components/ui/Footer";
 // import { InstrumentsServer } from "./components/server/InstrumentsServer";
 // import { FileEditorPage } from "./components/ui/WebcontainerTest";
 
@@ -13,7 +14,7 @@ import { AchievementsCarousel } from "./components/ui/AchievementsSection";
 
 export default function Home() {
   return (
-    <div className="pb-60">
+    <div className="">
       {/* <FileEditorPage></FileEditorPage> */}
       <TopNavigation></TopNavigation>
       <Hero></Hero>
@@ -23,6 +24,7 @@ export default function Home() {
       <ProjectsSection></ProjectsSection>
       <PublicationsSection></PublicationsSection>
       <AchievementsCarousel></AchievementsCarousel>
+      <Footer />
     </div>
   );
 }

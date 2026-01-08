@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "./utils/theme-provider";
 import { CursorLight } from "./utils/CursorLight";
 import BackToTopButton from "../components/ui/BackToTopButton";
+// import Footer from "./components/ui/Footer";
 
 
 const geistSans = Geist({
@@ -28,6 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <title>Portfolio</title>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -37,6 +39,7 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem>
           {children}
+          {/* <Footer /> */}
           <BackToTopButton />
         </ThemeProvider>
       </body>

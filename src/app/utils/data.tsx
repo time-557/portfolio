@@ -23,6 +23,7 @@ type Project = {
     title: string;
     url: string;
     description: string;
+    live?: string;
     tech_stack: string[];
     date: Date;
 };
@@ -63,7 +64,7 @@ export const Projects: Project[] = [
       title: "db-delta",
       url: "https://github.com/hussein-hub/db-delta",
       description: "A 'Git diff for databases' built in Python to find schema, row, and statistical differences in terabyte-scale data. It's SQL-native, pushing computation directly to servers like Snowflake and Postgres by generating dialect-specific queries.",
-      tech_stack: ["Python", "SQL", "Snowflake", "PostgreSQL", ""],
+      tech_stack: ["Python", "SQL", "Snowflake", "PostgreSQL", "MySQL"],
       date: new Date("2025-11-01")
     },
     {
@@ -73,6 +74,15 @@ export const Projects: Project[] = [
         description: "A cloud native deployment platform to reduce deployment time on OCI, automating infrastructure provisioning via custom CLI.",
         tech_stack: ["Next.js", "TypeScript", "OCI", "Docker", "WebSockets"],
         date: new Date("2025-04-01"),
+    },
+    {
+      id: ++counter,
+      title: "URL Shortener",
+      url: "https://github.com/hussein-hub/url-shortener",
+      description: "A modern URL shortener built with Spring Boot featuring click-tracking, custom short codes, and a responsive Tailwind CSS UI. Deployed on Render (may cold-start on the first request).",
+      live: "https://url-shortener-bvrg.onrender.com/",
+      tech_stack: ["Java", "Spring Boot", "Supabase", "PostgreSQL", "Tailwind CSS", "Render"],
+      date: new Date("2026-01-07"),
     },
     {
         id: ++counter,
@@ -191,24 +201,24 @@ export const certifications: Certificate[] = [
 ];
 
 export const skillsWithProficiency = [
+  { skill: "Business Optimisation", level: 70, Icon: SiTailwindcss, learning: true },
+  { skill: "Data Analytics", level: 80, Icon: SiGoogleanalytics, learning: true },
+  { skill: "Busines Analytics", level: 80, Icon: SiGoogleanalytics, learning: true },
   { skill: "Python", level: 90, Icon: SiPython, learning: false },
   { skill: "Java", level: 90, Icon: DiJava, learning: false },
   { skill: "SQL", level: 90, Icon: SiPostgresql, learning: false },
   { skill: "Oracle", level: 90, Icon: SiOracle, learning: false },
   { skill: "PL/SQL", level: 90, Icon: SiOracle, learning: false },
-  { skill: "Data Analytics", level: 80, Icon: SiGoogleanalytics, learning: true },
-  { skill: "Busines Analytics", level: 80, Icon: SiGoogleanalytics, learning: true },
-  { skill: "AWS", level: 75, Icon: SiAmazon, learning: false },
+  { skill: "XML", level: 90, Icon: SiOracle, learning: false },
+  { skill: "REST API", level: 90, Icon: SiOracle, learning: false },
+  { skill: "AWS", level: 70, Icon: SiAmazon, learning: false },
   { skill: "Snowflake", level: 75, Icon: SiSnowflake, learning: false },
   { skill: "Docker", level: 75, Icon: SiDocker, learning: false },
-  { skill: "Git", level: 90, Icon: SiGit, learning: false },
+  { skill: "Git", level: 80, Icon: SiGit, learning: false },
   { skill: "Bash", level: 70, Icon: SiGnubash, learning: false },
   { skill: "Airflow", level: 80, Icon: SiApacheairflow, learning: false },
   { skill: "JavaScript", level: 60, Icon: SiJavascript, learning: false },
   { skill: "TypeScript", level: 60, Icon: SiTypescript, learning: false },
-  { skill: "Next.js", level: 60, Icon: SiNextdotjs, learning: true },
-  { skill: "Tailwind CSS", level: 60, Icon: SiTailwindcss, learning: true },
-  { skill: "Business Optimisation", level: 70, Icon: SiTailwindcss, learning: true },
   // Added skills requested by user with matching icons where available
 ];
 
@@ -250,11 +260,11 @@ export const education: Education [] = [
 export const publications: Publication[] = [
   {
     id: 1,
-    title: "Comparative Analysis of Database Delta Detection Strategies for Large-Scale Data Warehouses",
-    authors: ["Hussein Khan", "Data Engineering Team"],
-    publication: "Data Engineering Journal",
-    date: new Date("2025-11-01"),
-    description: "Explores efficient methods for detecting schema and data differences in terabyte-scale databases, comparing SQL-native approaches with traditional delta detection methods.",
-    url: "https://github.com/hussein-hub/db-delta",
+    title: "Effective Inexpensive and Robust Solution to Classroom Attendance Recording Using Face Detection Technology",
+    authors: ["Hussein Motiwala", "Rushabh Gandhi", "Nayan Mandliya", "Kritarth Jain"],
+    publication: "International Journal of Research in Engineering, Science and Management",
+    date: new Date("2023-05-14"),
+    description: "Traditional methods of documenting attendance, such as roll call and sign-in pages, have several inefficiencies, as highlighted in the paper. They demand considerable time and effort from instructors and are susceptible to human error. Furthermore, these methods are frequently susceptible to proxy attendance, which can result in inaccurate records and negatively affect students' grades. To address these issues, the paper proposes a low-cost solution that makes use of class photographs and face detection techniques to track attendance. The system can autonomously locate and identify students' features from class images, removing the need for instructors to manually input data. Students can then register their attendance by distinguishing themselves from the list of detected features using a web application that is fast, simple, and parallel. The paper emphasizes that the proposed solution has several advantages over conventional methods of recording attendance. It is substantially more effective and can reduce instructors' workload. It is more precise and trustworthy because it is not susceptible to human error or fraudulent activity. The paper also notes that the system can aid in the identification of students who may require additional support or attention, as their attendance patterns can be more readily monitored. In spite of these advantages, the paper acknowledges that the proposed system has certain limitations. The instructor must have access to the internet and a camera-equipped device. For optimal use of the proposed system, it is suggested that students have a dependable Internet connection. In the event that students experience internet connectivity issues, they can request assistance from their instructors to ensure that their attendance is precisely recorded.",
+    url: "https://journal.ijresm.com/index.php/ijresm/article/view/2694",
   },
 ];
