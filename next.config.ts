@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
     basePath: `/${repoName}`,
     assetPrefix: `/${repoName}/`,
   }),
-  // assetPrefix: true ? 'https://time-557.github.io/portfolio/' : '',
+  assetPrefix: true ? 'https://time-557.github.io/portfolio/' : '',
 };
 
 export default nextConfig;
